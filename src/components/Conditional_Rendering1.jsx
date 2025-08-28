@@ -6,7 +6,6 @@ const logeedStatusBtn = (status) => {
         return <button>Login</button>
     }
 }
-
 const Conditional_Rendering1 = () => {
     return (
         <div>
@@ -14,5 +13,4 @@ const Conditional_Rendering1 = () => {
         </div>
     );
 };
-
 export default Conditional_Rendering1;

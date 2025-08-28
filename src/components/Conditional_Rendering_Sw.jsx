@@ -1,0 +1,33 @@
+
+import { useState } from 'react';
+
+const Conditional_Rendering_Sw = () => {
+    const [isLoggedIn, setIsLoggedIn] = useState(true);
+        const handleDropdownChange = (event) => {
+            setIsLoggedIn(event.target.value === 'true');
+    }
+    const swtchier = () => { 
+        switch (isLoggedIn) {
+            case true:
+                return <button>Log out</button>;
+            case false:
+                return <button>Log in</button>;
+            default:
+                return null
+        }
+    };
+    return (
+        <div>
+            <label htmlFor="login-status">Login Status:</label>
+            <select id="login-status" onChange={handleDropdownChange}>
+                <option value="true">True</option>
+                <option value="false">False</option>
+            </select>
+            {swtchier()}
+            
+            
+        </div>
+    );
+        
+};
+export default Conditional_Rendering_Sw;
